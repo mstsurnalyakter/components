@@ -82,7 +82,7 @@ const DeleteConfirmModal: React.FC<DeleteConfirmModalProps> = ({
                     Delete
                 </button>
             </div>
-        </Modal>
+        </ModalComponent>
     );
 };
 

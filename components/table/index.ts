@@ -3,12 +3,7 @@ export { TableHeading } from "./TableHeading";
 export { TableBody } from "./TableBody";
 export { TableRow } from "./TableRow";
 export { TableColumn } from "./TableColumn";
-
-
-
-
-//////////
-
+// import { ButtonComponent } from '@/components/ui/ButtonComponent';
 
 
 /**
@@ -18,7 +13,7 @@ import { Table, TableBody, TableColumn, TableHeading, TableRow } from '@/compone
 import Modal from '@/components/ui/modal';
 import { Edit, Plus, Trash2 } from 'lucide-react';
 import { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import { ButtonComponent } from '@/components/ui/ButtonComponent';
 import { SearchInput } from '@/components/form/search-input';
 import { Pagination } from '@/components/ui/pagination';
 import CreateModal from './CreateModal';
@@ -122,9 +117,9 @@ const TableComponent = ({ res }: { res: DataShape }) => {
                 <h3 className="text-xl font-semibold">Departments</h3>
                 <div className='flex justify-between items-center'>
                     <SearchInput value={searchTerm} onChange={v => { setSearchTerm(v); setCurrentPage(1); }} placeholder="Search by Department " />
-                    <Button onClick={() => setIsCreateModalOpen(true)}>
+                    <ButtonComponent onClick={() => setIsCreateModalOpen(true)}>
                         <Plus className="w-4 h-4" /> Add Department
-                    </Button>
+                    </ButtonComponent>
                 </div>
             </div>
             <Table className="">
@@ -174,4 +169,5 @@ const TableComponent = ({ res }: { res: DataShape }) => {
 }
 
 export default TableComponent
- */
+
+*/
