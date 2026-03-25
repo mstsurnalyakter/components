@@ -126,5 +126,47 @@ function FormMessage({
   );
 }
 
+/**
+ * Example usage of Form components:
+ *
+ * import { Form, FormField, FormItem, FormControl, FormDescription, FormMessage } from './form';
+ * import { useForm } from 'react-hook-form';
+ *
+ * function ExampleForm() {
+ *   const form = useForm({
+ *     defaultValues: {
+ *       username: '',
+ *     },
+ *   });
+ *
+ *   const onSubmit = (data) => {
+ *     console.log(data);
+ *   };
+ *
+ *   return (
+ *     <Form {...form}>
+ *       <form onSubmit={form.handleSubmit(onSubmit)}>
+ *         <FormField
+ *           name="username"
+ *           control={form.control}
+ *           render={({ field }) => (
+ *             <FormItem>
+ *               <FormControl>
+ *                 <input {...field} placeholder="Enter your username" />
+ *               </FormControl>
+ *               <FormDescription>
+ *                 Your unique username for the platform.
+ *               </FormDescription>
+ *               <FormMessage />
+ *             </FormItem>
+ *           )}
+ *         />
+ *         <button type="submit">Submit</button>
+ *       </form>
+ *     </Form>
+ *   );
+ * }
+ */
+
 export { Form, FormControl, FormDescription, FormField, FormItem, FormMessage, useFormField }
 
